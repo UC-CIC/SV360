@@ -18,14 +18,14 @@ CohortNameB_99990130_99990230/
 ├── metadata.json
 ├── sub001/
 │   ├── scan01/
-│   │   ├── PET/
+│   │   ├── PT/
 │   │   │   ├── static/
 │   │   │   ├── dynamic/
 │   │   │   ├── listmode/
 │   │   │   ├── parametric/
 │   │   ├── ACCT/
 │   ├── scan02/
-│   │   ├── PET/
+│   │   ├── PT/
 │   │   │   ├── static/
 │   │   │   ├── dynamic/
 │   │   │   ├── listmode/
@@ -33,14 +33,14 @@ CohortNameB_99990130_99990230/
 │   │   ├── ACCT/
 ├── sub002/
 │   ├── scan01/
-│   │   ├── PET/
+│   │   ├── PT/
 │   │   │   ├── static/
 │   │   │   ├── dynamic/
 │   │   │   ├── listmode/
 │   │   │   ├── parametric/
 │   │   ├── ACCT/
 │   ├── scan02/
-│   │   ├── PET/
+│   │   ├── PT/
 │   │   │   ├── static/
 │   │   │   ├── dynamic/
 │   │   │   ├── listmode/
@@ -78,24 +78,24 @@ of available projects within the collective open source data set:
         "MODALITY":"CT",
         "STUDY_TYPE":"STATIC (3D)"
     },
-    "PET_PARM": {
+    "PT_PARM": {
         "MACHINE":"SIEMEN",
-        "MODALITY":"PET",
+        "MODALITY":"PT",
         "RADIOSOTOPE":"F-18 FDG",
         "INJECTED_DOSE":"3.7-5.2 MBq/kg",
         "SCAN DURATION":"60-90 MIN POST INJECTION"
     },
-    "PT_DEMOGRAPHIC": {
+    "SUB_DEMOGRAPHIC": {
         "AGE_RANGE": "45-75",
         "GENDER_DISTRIBUTION": "55% MALE, 45% Female",
-        "TOTAL_PT": "> 800"
+        "TOTAL_SUB": "> 800"
     }
 }
 ```
 
 ## 🗝 Key for Directories
 
-- **PET**: Positron Emission Tomography
+- **PT**: Positron Emission Tomography
 - **ACCT**: Computed Tomography - Attenuation Correction
 - **static**: Static PET data
 - **dynamic**: Dynamic PET data
@@ -210,7 +210,7 @@ def generate_metadata(root_folder):
         "cohort": os.path.basename(root_folder),
         "description": f"A collection of PET/CT datasets for {os.path.basename(root_folder)}.",
         "directory_key": {
-            "PET": "Positron Emission Tomography",
+            "PT": "Positron Emission Tomography",
             "ACCT": "Computed Tomography - Attenuation Correction",
             "static": "Static PET data",
             "dynamic": "Dynamic PET data",
