@@ -10,42 +10,42 @@ representation, and programmable data retrieval.
 
 ```
 sv360_metadata.json
-CohortNameA_99990130_99990230/
+cohort_name_a__99990130__99990230/
 ├── ...
 ├── ...
 │   ├── ...
-CohortNameB_99990130_99990230/
+cohort_name_b__99990130__99990230/
 ├── metadata.json
 ├── sub001/
 │   ├── scan01/
-│   │   ├── PT/
+│   │   ├── pt/
 │   │   │   ├── static/
 │   │   │   ├── dynamic/
 │   │   │   ├── listmode/
 │   │   │   ├── parametric/
-│   │   ├── ACCT/
+│   │   ├── acct/
 │   ├── scan02/
-│   │   ├── PT/
+│   │   ├── pt/
 │   │   │   ├── static/
 │   │   │   ├── dynamic/
 │   │   │   ├── listmode/
 │   │   │   ├── parametric/
-│   │   ├── ACCT/
+│   │   ├── acct/
 ├── sub002/
 │   ├── scan01/
-│   │   ├── PT/
+│   │   ├── pt/
 │   │   │   ├── static/
 │   │   │   ├── dynamic/
 │   │   │   ├── listmode/
 │   │   │   ├── parametric/
-│   │   ├── ACCT/
+│   │   ├── acct/
 │   ├── scan02/
-│   │   ├── PT/
+│   │   ├── pt/
 │   │   │   ├── static/
 │   │   │   ├── dynamic/
 │   │   │   ├── listmode/
 │   │   │   ├── parametric/
-│   │   ├── ACCT/
+│   │   ├── acct/
 ```
 
 ## Root Directory Structure
@@ -64,88 +64,88 @@ of available projects within the collective open source data set:
 ```json
 [
     {
-        "PROJECT_NAME": "Project 1",
-        "SHORT_DESC": "Lorem ipsum 1", 
-        "START": "YYYYMMDD1",
-        "END": "YYYYMMDD1",
-        "OBJECTIVE": "Lorem Ipsum 1",
-        "PRINCIPAL_INVESTIGATOR": "Name 1",
-        "PRINCIPAL_INVESTIGATOR_CONTACT": "contact 1",
-        "AVAIL_DATA": "Lorem Ipsum 1",
-        "INSTITUTIONS": [
+        "project_name": "Project 1",
+        "short_desc": "Lorem ipsum 1", 
+        "start": "YYYYMMDD1",
+        "end": "YYYYMMDD1",
+        "objective": "Lorem Ipsum 1",
+        "principal_investigator": "Name 1",
+        "principal_investigator_contact": "contact 1",
+        "avail_data": "Lorem Ipsum 1",
+        "institutions": [
             {
-                "NAME": "Institution 1",
-                "CT_PARM": {
-                    "MACHINE": "SIEMENS",
-                    "SETTINGS": "120kV,80mAs",
-                    "MODALITY": "CT",
-                    "STUDY_TYPE": "STATIC (3D)"
+                "name": "Institution 1",
+                "ct_parm": {
+                    "machine": "SIEMENS",
+                    "settings": "120kV,80mAs",
+                    "modality": "CT",
+                    "study_type": "STATIC (3D)"
                 },
-                "PT_PARM": {
-                    "MACHINE": "SIEMEN",
-                    "MODALITY": "PT",
-                    "RADIOSOTOPE": "F-18 FDG",
-                    "INJECTED_DOSE": "3.7-5.2 MBq/kg",
-                    "SCAN DURATION": "60-90 MIN POST INJECTION"
+                "pt_parm": {
+                    "machine": "SIEMEN",
+                    "modality": "PT",
+                    "radiosotope": "F-18 FDG",
+                    "injected_dose": "3.7-5.2 MBq/kg",
+                    "scan_duration": "60-90 MIN POST INJECTION"
                 },
-                "SUB_DEMOGRAPHIC": {
-                    "AGE_RANGE": "45-75",
-                    "GENDER_DISTRIBUTION": "55% MALE, 45% Female",
-                    "TOTAL_SUB": "> 800"
+                "sub_demographic": {
+                    "age_range": "45-75",
+                    "gender_distribution": "55% MALE, 45% Female",
+                    "total_sub": "> 800"
                 }
             },
             {
-                "NAME": "Institution 2",
-                "CT_PARM": {
-                    "MACHINE": "SIEMENS",
-                    "SETTINGS": "Custom settings for Institution 2",
-                    "MODALITY": "CT",
-                    "STUDY_TYPE": "Custom study type for Institution 2"
+                "name": "Institution 2",
+                "ct_parm": {
+                    "machine": "SIEMENS",
+                    "settings": "Custom settings for Institution 2",
+                    "modality": "CT",
+                    "study_type": "Custom study type for Institution 2"
                 },
-                "PT_PARM": {
-                    "MACHINE": "SIEMEN",
-                    "MODALITY": "PT",
-                    "RADIOSOTOPE": "Custom radiosotope for Institution 2",
-                    "INJECTED_DOSE": "Custom dose for Institution 2",
-                    "SCAN DURATION": "Custom duration for Institution 2"
+                "pt_parm": {
+                    "machine": "SIEMEN",
+                    "modality": "PT",
+                    "radiosotope": "Custom radiosotope for Institution 2",
+                    "injected_dose": "Custom dose for Institution 2",
+                    "scan_duration": "Custom duration for Institution 2"
                 },
-                "SUB_DEMOGRAPHIC": {
-                    "AGE_RANGE": "Custom age range for Institution 2",
-                    "GENDER_DISTRIBUTION": "Custom gender distribution for Institution 2",
-                    "TOTAL_SUB": "Custom total subjects for Institution 2"
+                "sub_demographic": {
+                    "age_range": "Custom age range for Institution 2",
+                    "gender_distribution": "Custom gender distribution for Institution 2",
+                    "total_sub": "Custom total subjects for Institution 2"
                 }
             }
         ]
     },
     {
-        "PROJECT_NAME": "Project 2",
-        "SHORT_DESC": "Lorem ipsum 2", 
-        "START": "YYYYMMDD2",
-        "END": "YYYYMMDD2",
-        "OBJECTIVE": "Lorem Ipsum 2",
-        "PRINCIPAL_INVESTIGATOR": "Name 2",
-        "PRINCIPAL_INVESTIGATOR_CONTACT": "contact 2",
-        "AVAIL_DATA": "Lorem Ipsum 2",
-        "INSTITUTIONS": [
+        "project_name": "Project 2",
+        "short_desc": "Lorem ipsum 2", 
+        "start": "YYYYMMDD2",
+        "end": "YYYYMMDD2",
+        "objective": "Lorem Ipsum 2",
+        "principal_investigator": "Name 2",
+        "principal_investigator_contact": "contact 2",
+        "avail_data": "Lorem Ipsum 2",
+        "institutions": [
             {
-                "NAME": "Institution 3",
-                "CT_PARM": {
-                    "MACHINE": "SIEMENS",
-                    "SETTINGS": "Settings for Institution 3",
-                    "MODALITY": "CT",
-                    "STUDY_TYPE": "Study type for Institution 3"
+                "name": "Institution 3",
+                "ct_parm": {
+                    "machine": "SIEMENS",
+                    "settings": "Settings for Institution 3",
+                    "modality": "CT",
+                    "study_type": "Study type for Institution 3"
                 },
-                "PT_PARM": {
-                    "MACHINE": "SIEMEN",
-                    "MODALITY": "PT",
-                    "RADIOSOTOPE": "Radiosotope for Institution 3",
-                    "INJECTED_DOSE": "Dose for Institution 3",
-                    "SCAN DURATION": "Duration for Institution 3"
+                "pt_parm": {
+                    "machine": "SIEMEN",
+                    "modality": "PT",
+                    "radiosotope": "Radiosotope for Institution 3",
+                    "injected_dose": "Dose for Institution 3",
+                    "scan_duration": "Duration for Institution 3"
                 },
-                "SUB_DEMOGRAPHIC": {
-                    "AGE_RANGE": "Age range for Institution 3",
-                    "GENDER_DISTRIBUTION": "Gender distribution for Institution 3",
-                    "TOTAL_SUB": "Total subjects for Institution 3"
+                "sub_demographic": {
+                    "age_range": "Age range for Institution 3",
+                    "gender_distribution": "Gender distribution for Institution 3",
+                    "total_sub": "Total subjects for Institution 3"
                 }
             }
         ]
@@ -174,8 +174,8 @@ each cohort/project:
     "cohort": "LungCancerPatients",
     "description": "A collection of PET/CT datasets for lung cancer patients.",
     "directory_key": {
-        "PET": "Positron Emission Tomography",
-        "ACCT": "Computed Tomography - Attenuation Correction",
+        "pet": "Positron Emission Tomography",
+        "acct": "Computed Tomography - Attenuation Correction",
         "static": "Static PET data",
         "dynamic": "Dynamic PET data",
         "listmode": "List-mode PET data",
@@ -218,7 +218,7 @@ each cohort/project:
                         "dynamic": true,
                         "listmode": true,
                         "parametric": true,
-                        "ACCT": true
+                        "acct": true
                     }
                 },
                 {
@@ -228,7 +228,7 @@ each cohort/project:
                         "dynamic": false,
                         "listmode": false,
                         "parametric": true,
-                        "ACCT": true
+                        "acct": true
                     }
                 }
             ]
@@ -272,8 +272,8 @@ def generate_metadata(root_folder):
         "cohort": os.path.basename(root_folder),
         "description": f"A collection of PET/CT datasets for {os.path.basename(root_folder)}.",
         "directory_key": {
-            "PT": "Positron Emission Tomography",
-            "ACCT": "Computed Tomography - Attenuation Correction",
+            "pt": "Positron Emission Tomography",
+            "acct": "Computed Tomography - Attenuation Correction",
             "static": "Static PET data",
             "dynamic": "Dynamic PET data",
             "listmode": "List-mode PET data",
@@ -300,7 +300,7 @@ def generate_metadata(root_folder):
                             "dynamic": os.path.exists(os.path.join(scan_path, "PET", "dynamic")),
                             "listmode": os.path.exists(os.path.join(scan_path, "PET", "listmode")),
                             "parametric": os.path.exists(os.path.join(scan_path, "PET", "parametric")),
-                            "ACCT": os.path.exists(os.path.join(scan_path, "ACCT"))
+                            "acct": os.path.exists(os.path.join(scan_path, "ACCT"))
                         }
                     }
                     subject_data["scans"].append(scan_data)
