@@ -167,7 +167,7 @@ of available projects within the collective open source data set:
 ## 🔍 `metadata.json` Structure
 
 The `metadata.json` file serves as a comprehensive overview of the dataset for
-each cohort:
+each cohort/project:
 
 ```json
 {
