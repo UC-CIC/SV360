@@ -18,14 +18,14 @@ CohortNameB_99990130_99990230/
 ├── metadata.json
 ├── sub001/
 │   ├── scan01/
-│   │   ├── PET/
+│   │   ├── PT/
 │   │   │   ├── static/
 │   │   │   ├── dynamic/
 │   │   │   ├── listmode/
 │   │   │   ├── parametric/
 │   │   ├── ACCT/
 │   ├── scan02/
-│   │   ├── PET/
+│   │   ├── PT/
 │   │   │   ├── static/
 │   │   │   ├── dynamic/
 │   │   │   ├── listmode/
@@ -33,14 +33,14 @@ CohortNameB_99990130_99990230/
 │   │   ├── ACCT/
 ├── sub002/
 │   ├── scan01/
-│   │   ├── PET/
+│   │   ├── PT/
 │   │   │   ├── static/
 │   │   │   ├── dynamic/
 │   │   │   ├── listmode/
 │   │   │   ├── parametric/
 │   │   ├── ACCT/
 │   ├── scan02/
-│   │   ├── PET/
+│   │   ├── PT/
 │   │   │   ├── static/
 │   │   │   ├── dynamic/
 │   │   │   ├── listmode/
@@ -62,40 +62,102 @@ The `sv360_metadata.json` file serves as a comprehensive overview & description
 of available projects within the collective open source data set:
 
 ```json
-{
-    "PROJECT_NAME": "PNAME",
-    "SHORT_DESC": "Lorem ipsum", 
-    "START": "YYYYMMDD",
-    "END": "YYYYMMDD",
-    "OBJECTIVE": "Lorem Ipsum",
-    "PRINCIPAL_INVESTIGATOR": "Name",
-    "PRINCIPAL_INVESTIGATOR_CONTACT":"contact",
-    "AVAIL_DATA": "Lorem Ipsum",
-    "ORIGIN": ["Institution 1", "institution 2"],
-    "CT_PARM": {
-        "MACHINE":"SIEMENS",
-        "SETTINGS":"120kV,80mAs",
-        "MODALITY":"CT",
-        "STUDY_TYPE":"STATIC (3D)"
+[
+    {
+        "PROJECT_NAME": "Project 1",
+        "SHORT_DESC": "Lorem ipsum 1", 
+        "START": "YYYYMMDD1",
+        "END": "YYYYMMDD1",
+        "OBJECTIVE": "Lorem Ipsum 1",
+        "PRINCIPAL_INVESTIGATOR": "Name 1",
+        "PRINCIPAL_INVESTIGATOR_CONTACT": "contact 1",
+        "AVAIL_DATA": "Lorem Ipsum 1",
+        "INSTITUTIONS": [
+            {
+                "NAME": "Institution 1",
+                "CT_PARM": {
+                    "MACHINE": "SIEMENS",
+                    "SETTINGS": "120kV,80mAs",
+                    "MODALITY": "CT",
+                    "STUDY_TYPE": "STATIC (3D)"
+                },
+                "PT_PARM": {
+                    "MACHINE": "SIEMEN",
+                    "MODALITY": "PT",
+                    "RADIOSOTOPE": "F-18 FDG",
+                    "INJECTED_DOSE": "3.7-5.2 MBq/kg",
+                    "SCAN DURATION": "60-90 MIN POST INJECTION"
+                },
+                "SUB_DEMOGRAPHIC": {
+                    "AGE_RANGE": "45-75",
+                    "GENDER_DISTRIBUTION": "55% MALE, 45% Female",
+                    "TOTAL_SUB": "> 800"
+                }
+            },
+            {
+                "NAME": "Institution 2",
+                "CT_PARM": {
+                    "MACHINE": "SIEMENS",
+                    "SETTINGS": "Custom settings for Institution 2",
+                    "MODALITY": "CT",
+                    "STUDY_TYPE": "Custom study type for Institution 2"
+                },
+                "PT_PARM": {
+                    "MACHINE": "SIEMEN",
+                    "MODALITY": "PT",
+                    "RADIOSOTOPE": "Custom radiosotope for Institution 2",
+                    "INJECTED_DOSE": "Custom dose for Institution 2",
+                    "SCAN DURATION": "Custom duration for Institution 2"
+                },
+                "SUB_DEMOGRAPHIC": {
+                    "AGE_RANGE": "Custom age range for Institution 2",
+                    "GENDER_DISTRIBUTION": "Custom gender distribution for Institution 2",
+                    "TOTAL_SUB": "Custom total subjects for Institution 2"
+                }
+            }
+        ]
     },
-    "PET_PARM": {
-        "MACHINE":"SIEMEN",
-        "MODALITY":"PET",
-        "RADIOSOTOPE":"F-18 FDG",
-        "INJECTED_DOSE":"3.7-5.2 MBq/kg",
-        "SCAN DURATION":"60-90 MIN POST INJECTION"
-    },
-    "PT_DEMOGRAPHIC": {
-        "AGE_RANGE": "45-75",
-        "GENDER_DISTRIBUTION": "55% MALE, 45% Female",
-        "TOTAL_PT": "> 800"
+    {
+        "PROJECT_NAME": "Project 2",
+        "SHORT_DESC": "Lorem ipsum 2", 
+        "START": "YYYYMMDD2",
+        "END": "YYYYMMDD2",
+        "OBJECTIVE": "Lorem Ipsum 2",
+        "PRINCIPAL_INVESTIGATOR": "Name 2",
+        "PRINCIPAL_INVESTIGATOR_CONTACT": "contact 2",
+        "AVAIL_DATA": "Lorem Ipsum 2",
+        "INSTITUTIONS": [
+            {
+                "NAME": "Institution 3",
+                "CT_PARM": {
+                    "MACHINE": "SIEMENS",
+                    "SETTINGS": "Settings for Institution 3",
+                    "MODALITY": "CT",
+                    "STUDY_TYPE": "Study type for Institution 3"
+                },
+                "PT_PARM": {
+                    "MACHINE": "SIEMEN",
+                    "MODALITY": "PT",
+                    "RADIOSOTOPE": "Radiosotope for Institution 3",
+                    "INJECTED_DOSE": "Dose for Institution 3",
+                    "SCAN DURATION": "Duration for Institution 3"
+                },
+                "SUB_DEMOGRAPHIC": {
+                    "AGE_RANGE": "Age range for Institution 3",
+                    "GENDER_DISTRIBUTION": "Gender distribution for Institution 3",
+                    "TOTAL_SUB": "Total subjects for Institution 3"
+                }
+            }
+        ]
     }
-}
+]
+
+
 ```
 
 ## 🗝 Key for Directories
 
-- **PET**: Positron Emission Tomography
+- **PT**: Positron Emission Tomography
 - **ACCT**: Computed Tomography - Attenuation Correction
 - **static**: Static PET data
 - **dynamic**: Dynamic PET data
@@ -105,7 +167,7 @@ of available projects within the collective open source data set:
 ## 🔍 `metadata.json` Structure
 
 The `metadata.json` file serves as a comprehensive overview of the dataset for
-each cohort:
+each cohort/project:
 
 ```json
 {
@@ -210,7 +272,7 @@ def generate_metadata(root_folder):
         "cohort": os.path.basename(root_folder),
         "description": f"A collection of PET/CT datasets for {os.path.basename(root_folder)}.",
         "directory_key": {
-            "PET": "Positron Emission Tomography",
+            "PT": "Positron Emission Tomography",
             "ACCT": "Computed Tomography - Attenuation Correction",
             "static": "Static PET data",
             "dynamic": "Dynamic PET data",
