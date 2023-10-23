@@ -71,26 +71,52 @@ of available projects within the collective open source data set:
     "PRINCIPAL_INVESTIGATOR": "Name",
     "PRINCIPAL_INVESTIGATOR_CONTACT":"contact",
     "AVAIL_DATA": "Lorem Ipsum",
-    "ORIGIN": ["Institution 1", "institution 2"],
-    "CT_PARM": {
-        "MACHINE":"SIEMENS",
-        "SETTINGS":"120kV,80mAs",
-        "MODALITY":"CT",
-        "STUDY_TYPE":"STATIC (3D)"
-    },
-    "PT_PARM": {
-        "MACHINE":"SIEMEN",
-        "MODALITY":"PT",
-        "RADIOSOTOPE":"F-18 FDG",
-        "INJECTED_DOSE":"3.7-5.2 MBq/kg",
-        "SCAN DURATION":"60-90 MIN POST INJECTION"
-    },
-    "SUB_DEMOGRAPHIC": {
-        "AGE_RANGE": "45-75",
-        "GENDER_DISTRIBUTION": "55% MALE, 45% Female",
-        "TOTAL_SUB": "> 800"
-    }
+    "INSTITUTIONS": [
+        {
+            "NAME": "Institution 1",
+            "CT_PARM": {
+                "MACHINE": "SIEMENS",
+                "SETTINGS": "120kV,80mAs",
+                "MODALITY": "CT",
+                "STUDY_TYPE": "STATIC (3D)"
+            },
+            "PT_PARM": {
+                "MACHINE": "SIEMEN",
+                "MODALITY": "PT",
+                "RADIOSOTOPE": "F-18 FDG",
+                "INJECTED_DOSE": "3.7-5.2 MBq/kg",
+                "SCAN DURATION": "60-90 MIN POST INJECTION"
+            },
+            "SUB_DEMOGRAPHIC": {
+                "AGE_RANGE": "45-75",
+                "GENDER_DISTRIBUTION": "55% MALE, 45% Female",
+                "TOTAL_SUB": "> 800"
+            }
+        },
+        {
+            "NAME": "Institution 2",
+            "CT_PARM": {
+                "MACHINE": "SIEMENS",
+                "SETTINGS": "Custom settings for Institution 2",
+                "MODALITY": "CT",
+                "STUDY_TYPE": "Custom study type for Institution 2"
+            },
+            "PT_PARM": {
+                "MACHINE": "SIEMEN",
+                "MODALITY": "PT",
+                "RADIOSOTOPE": "Custom radiosotope for Institution 2",
+                "INJECTED_DOSE": "Custom dose for Institution 2",
+                "SCAN DURATION": "Custom duration for Institution 2"
+            },
+            "SUB_DEMOGRAPHIC": {
+                "AGE_RANGE": "Custom age range for Institution 2",
+                "GENDER_DISTRIBUTION": "Custom gender distribution for Institution 2",
+                "TOTAL_SUB": "Custom total subjects for Institution 2"
+            }
+        }
+    ]
 }
+
 ```
 
 ## 🗝 Key for Directories
